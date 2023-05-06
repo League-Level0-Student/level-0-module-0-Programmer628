@@ -10,7 +10,7 @@
 // You will use these later.
 PImage face;
 PImage mustache;
-
+PImage hat;
 
 void setup() {
   
@@ -26,7 +26,8 @@ face.resize(600,800);
 //    Try to find one with a transparent background. Use the same idea as in step 1.
 //    Make sure the file name is correct for the mustache image you saved.  
 mustache = loadImage("mustache.png");
-
+mustache.resize(280,100);
+hat = loadImage("
   }
 
 void draw() {
@@ -37,9 +38,12 @@ void draw() {
 
 // 7. DRAW MUSTACHE. Use the image() command to draw the mustache.  
 //                  The image command looks like this:
-if (mousePressed)
-image (mustache, mouseX, mouseY);
-mustache.resize(280,100);
+if (mousePressed){
+image (mustache, mouseX-140, mouseY-50);
+
+}
+
+
 //    The numbers specify where to draw the mustache. They represent the top left corner of the image
 //    Run the program to see if the mustache is drawn on the face. Get this working before you go on.
 //    If you need to resize the mustache, do it in the setup() method after you loaded the mustache image.
@@ -52,6 +56,6 @@ mustache.resize(280,100);
 //     Add or subtract from mouseX and mouseY when you draw the mustache,
 //               so the mustache center appears where the mouse pointer is
 //     Draw a hat on the sketch when the right mouse button is pressed. Use this code.
-//               if (mouseButton == RIGHT)  {     }
+if (mouseButton == RIGHT)  {     }
 
 }
